@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  
+  color: white;
+}
 
 
 #ui {
@@ -53,25 +58,134 @@ footer {
 
 /* TEST */
 footer > div {
-  background-color: crimson;
+  /* background-color: crimson; */
   border: #282828 1px solid;
 }
 /* / TEST */
 
 footer #footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
   width: 100%;
-  max-width: 240px;
+  max-width: 300px;
+
+  padding: 24px 10px;
 }
 
+/* track album cover */
+footer #footer-left .track-album-cover {
+  height: 100%;
+}
+
+footer #footer-left .track-album-cover img {
+  height: 100%;
+}
+/* / track album cover */
+
+
+/* track details */
+footer #footer-left .track-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  
+
+}
+
+footer #footer-left .track-details span{
+  opacity: .7;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+/* /track details */
+
+
+footer #footer-left .track-buttons .fa-regular { 
+  opacity: .7;
+}
+
+
+/* footer center */
 footer #footer-center {
   width: 100%;
   min-width: 200px;
   max-width: 530px;
 
+  padding: 0 4px;
 }
+
+/* player-buttons */
+footer #footer-center .player-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  height: 50%;
+
+  padding: 8px 0;
+  padding-top: 18px;
+
+  font-size: 1.4em;
+}
+
+footer #footer-center .player-buttons #play-button {
+  font-size: 1.6em;
+
+  transition: transform .3s;
+}
+
+/* BONUS */
+footer #footer-center .player-buttons #play-button:hover {
+  transform: scale(110%);
+}
+
+/* /player-buttons */
+
+/* player-timeline */
+footer #footer-center .player-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+
+  height: 50%;
+}
+
+footer #footer-center .player-timeline .player-timeline-bar {
+  flex-grow: 1;
+}
+
+footer #footer-center .player-timeline .player-timeline-bar .player-timeline-bar-total {
+  width: 100%;
+  height: 4px;
+
+  border-radius: 2px;
+
+  background-color: #5a5a5a;
+}
+
+footer #footer-center .player-timeline .player-timeline-bar .player-timeline-bar-total .player-timeline-bar-current {
+  background-color: #c1c1c1;
+
+  width: 15%;
+  height: 100%;
+
+  border-radius: 2px;
+
+}
+/* / player-timeline */
 
 footer #footer-right {
   width: 100%;
   max-width: 240px;
 
 }
+/* /footer center */
+
