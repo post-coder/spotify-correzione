@@ -5,3 +5,41 @@
 }
 
 
+
+#ui {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* main layout */
+
+/* main-row */
+.main-row {
+  display: flex;
+  flex-direction: row;
+
+  height: calc(100% - 100px);
+}
+
+
+.main-row header {
+  background-color: #920000;
+  /*  TEST */
+
+  width: 200px;
+}
+
+.main-row main {
+  background-color: #700000;
+  /*  TEST */
+  width: calc(100% - 200px);
+}
+/* /main-row */
+
+footer {
+  background-color: #282828;
+  /* TEST */
+
+  height: 100px;
+}
