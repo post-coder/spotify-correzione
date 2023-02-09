@@ -42,6 +42,8 @@ body {
 
   width: calc(100% - 200px);
   height: 100%;
+
+  overflow-y: auto;
 }
 /* /main-row */
 
@@ -86,6 +88,116 @@ main #banner-premium button {
 }
 /* /banner premium */
 
+/* main inner */
+main #main-inner {
+  padding: 90px 20px 40px;
+}
+
+
+/* links */
+main #main-inner #links {
+  padding: 16px 0;
+}
+
+main #main-inner #links ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+main #main-inner #links ul li {
+  position: relative;
+}
+
+main #main-inner #links ul li a {
+  color: white;
+  text-decoration: none;
+
+  opacity: .4;
+  
+  transition: opacity .3s;
+}
+
+main #main-inner #links ul li a:hover  {
+  opacity: 1;
+}
+
+main #main-inner #links ul li.active::before {
+  content: "";
+
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+
+  width: 30px;
+  height: 3px;
+
+  transform: translateX(-50%);
+
+  background-color: #adff2f;
+
+}
+  
+/* / links */
+
+main #main-inner section {
+  padding-top: 35px;
+}
+
+main #main-inner section h2 {
+  margin-bottom: 1em;
+}
+
+main #main-inner section h2 small {
+  font-size: small;
+  opacity: .6;
+}
+
+main #main-inner .album-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  text-align: center;
+}
+
+main #main-inner .album-container .album {
+  width: calc(100% / 6 - (15px / 6 * 5));
+
+  margin-bottom: 1em;
+}
+
+main #main-inner .album-container .album .album-img {
+  margin-bottom: 1em;
+}
+
+main #main-inner .album-container .album .album-title {
+  margin-bottom: .7em;
+  font-weight: bold;
+}
+
+main #main-inner .album-container .album .album-artist {
+  opacity: .7;
+}
+
+main #main-inner .album-container .album .album-img img {
+  width: 100%;
+  /* height: auto; */
+}
+
+
+main #main-inner .popular-artists .album-container .album .album-img {
+  border-radius: 50%;  
+  overflow: hidden;
+}
+
+/* / main inner */
 
 
 /* / MAIN */
@@ -235,3 +347,19 @@ footer #footer-right {
 }
 /* /footer center */
 
+
+
+
+/* MEDIA QUERY TABLET  */
+
+@media screen and (max-width: 992px) {
+  main #main-inner .album-container .album {
+    width: calc(100% / 4 - (15px / 4 * 3));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main #main-inner .album-container .album {
+    width: calc(100% / 2 - (15px / 2 * 1));
+  }
+}
