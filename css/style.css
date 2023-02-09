@@ -37,7 +37,7 @@ body {
 }
 
 .main-row main {
-  background-color: #700000;
+  background-color: #141922;
   /*  TEST */
 
   width: calc(100% - 200px);
@@ -45,6 +45,52 @@ body {
 }
 /* /main-row */
 
+
+/* MAIN */
+
+/* banner premium */
+main #banner-premium {
+  display: flex; 
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1em;
+  
+  position: fixed;
+
+  width: calc(100% - 200px);
+  height: 90px;
+
+  top: 0;
+  left: 200px;
+
+  padding-top: .8em;
+  padding-right: 1.5em;
+
+  text-align: right;
+
+
+  background-color: rgba(0,0,0, .4);
+  
+}
+
+main #banner-premium button {
+  padding: 20px 30px;
+
+  border-radius: 30px;
+  border: solid 1px white;
+
+  text-transform: uppercase;
+
+  background-color: transparent;
+  color: white;
+}
+/* /banner premium */
+
+
+
+/* / MAIN */
+
+/* footer  */
 footer {
   background-color: #282828;
   /* TEST */
