@@ -16,6 +16,15 @@ body {
   height: 100vh;
 }
 
+.mobile-only {
+  display: none;
+}
+
+
+
+
+
+
 
 /* main layout */
 
@@ -28,13 +37,135 @@ body {
 }
 
 
-.main-row header {
-  background-color: #920000;
-  /*  TEST */
+/* header */
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  
   width: 200px;
   height: 100%;
+
+  background-color: black;
+  color: #a3a3a3;
+  font-weight: bold;
 }
+
+header #header-top {
+  padding: 0 20px;
+}
+
+header #header-top ul {
+  list-style-type: none;
+}
+
+header #header-top #spotify-logo-wrapper {
+  margin-bottom: 24px;
+}
+
+header #header-top nav {
+  margin-bottom: 18px;
+}
+
+
+header #header-top nav ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .4em;
+
+  margin-bottom: .8em;
+}
+
+header #header-top nav ul li.active {
+  color: white;
+}
+
+header #header-top nav ul li.active::before {
+  content: '';
+  position: absolute;
+
+  height: 35px;
+  width: 3px;
+
+  left: 0;
+
+  background-color: #ADFF2F;
+}
+
+header #header-top nav ul li img {
+  max-width: 24px;
+
+}
+
+
+/* playlist list */
+header #header-top #playlist-list h3 {
+  color: white;
+}
+
+header #header-top #create-playlist-button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+
+  margin-bottom: .8em;
+}
+
+
+header #header-top #create-playlist-button-wrapper .create-playlist-icon {
+  font-size: 2.5em;
+}
+
+header #header-top #playlist-list ul li {
+  margin-bottom: .6em;
+  
+}
+
+/* / playlist list */
+
+
+
+/* header-bottom */
+header #header-bottom {
+  padding: 1em 20px;
+}
+
+header #header-bottom > div {
+  display: flex;
+  align-items: center;
+  gap: .8em;
+}
+
+header #header-bottom #app-install {
+  border-bottom: 1px solid #808080;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+header #header-bottom #app-install img {
+  width: 1em;
+}
+
+header #header-bottom #profile-link .profile-link-img-wrapper {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #808080;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+header #header-bottom #profile-link .profile-link-img-wrapper img {
+  width: 100%;
+}
+
+/* / header-bottom */
+
+/* /header */
 
 .main-row main {
   background-color: #141922;
@@ -362,4 +493,39 @@ footer #footer-right {
   main #main-inner .album-container .album {
     width: calc(100% / 2 - (15px / 2 * 1));
   }
+}
+
+
+@media screen and (max-width: 576px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+  /* hide desktop only elements  */
+
+  header {
+    width: 50px;
+  }
+
+  header #header-top {
+    padding: 0 .4em;
+  }
+
+  header #header-bottom {
+    padding: 0 .4em;
+  }
+
+  /* main */
+  main #banner-premium {
+    width: calc(100% - 50px);
+    left: 50px;
+  }
+  .main-row main {
+    width: calc(100% - 50px);
+  }
+  /* / main */
+
 }
